@@ -5,6 +5,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8">
 	<title>Auna</title>
+
+	<link rel="stylesheet" type="text/css" href="bigc/css/jquery-ui.css" />
+
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
@@ -152,7 +155,7 @@
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita corrupti ullam temporibus, sapiente libero amet placeat nesciunt possimus dolorum nam! Sequi veniam, dicta dolorum, nihil saepe quibusdam consectetur obcaecati aliquam?</p>
 						</div>
 						<a class="button button-add-cart" data-quantity="1" data-toggle="modal" data-target="#info">Pedir más información</a>
-						<a class="button button-add-cart" data-quantity="1" data-toggle="modal" data-target="#reserva">Reservar</a>
+						<a class="button button-add-cart" data-quantity="1" data-toggle="modal" data-target="#generacupon">Generar cupón</a>
 					</div>
 				</div>
 			</div>
@@ -337,47 +340,6 @@
 	</footer>
 	<a href="#" class="scroll_top" title="Scroll to Top" style="display: block;"><i class="fa fa-arrow-up"></i></a>
 	<!--	MODALS-->
-	<div class="modal fade" id="reserva" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
-		<div class="modal-dialog" role="document" style="z-index: 1041;margin-top: 100px;">
-			<div class="modal-content">
-				<div class="modal-header" style="border-bottom: 0;">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					</button>
-				</div>
-				<div class="modal-body " style="margin-bottom: 20px;">
-					<h4 class="text-center">HACER UNA RESERVA</h4>
-					<br>
-					<label for="">Establecimiento</label><br>
-					<select name="" class="normal" id="" style="width: 100%;height: 40px">
-						<option value="" class="normal">Seleccionar</option>
-						<option value="" class="normal">Miraflores</option>
-						<option value="" class="normal">La Molina</option>
-						<option value="" class="normal">Torre Orquideas</option>
-					</select>
-					<br><br>
-					<label for="">Nº de personas</label><br>
-					<div class="quantity">
-						<a href="">-</a>
-						<input type="text" size="4" class="input-text qty text text-center" title="Qty" value="03" name="quantity">
-						<a href="">+</a>
-					</div>
-					<br><br>
-					<label for="">Fecha</label><br>
-					<input id="" type="date" style="width: 100%">
-					<br><br>
-					<label for="">Indícanos si tienes algun requerimiento particular</label><br>
-					<input id="" type="text" style="width: 100%">
-					<br><br>
-					<p>En breve recibirás un correo electrónico confirmando tu reserva. Si no has recibido una respuesta despues de XXX horas por favor llámanos al XXX</p>
-					<div class="row text-center">
-						<div class="col-md-12">
-							<a class="button style-10" data-dismiss="modal">Hacer la reserva</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
 	<div class="modal fade" id="info" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
 		<div class="modal-dialog" role="document" style="z-index: 1041;margin-top: 100px;">
 			<div class="modal-content">
@@ -404,6 +366,49 @@
 			</div>
 		</div>
 	</div>
+
+	<!-- agsagsdf -->
+	<div class="modal fade no-padding" id="generacupon" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header" style="border: 0">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div id="enviar" class="text-center">
+						<div class="modal-icon">
+							<img src="images/icons/genera-cupon.png" height="35" alt="">
+						</div>
+						<h6 style="margin: 10px 0">GENERAR CUPÓN</h6>
+						<div style="margin-top: 20px;">
+							<p>Vas a generar un cupón, este tendrá un tiempo de expiración <br>¿Desea continuar? </p>
+						</div>
+						<div class="text-center" style="margin-top: 20px;display: inline-block">
+							<input type="button" style="float: left" class="button style-10" onclick="mostrar('ok','enviar')" value="Aceptar">
+							<input type="button" style="float: right;margin-left: 10px;" class="button style-11" data-dismiss="modal" aria-hidden="true" value="Cancelar">
+						</div>
+					</div>
+					<div id="ok" class="featured-item text-center m-bot-50" style="display: none">
+						<div class="modal-icon">
+							<img src="images/icons/gracias-cupon.png" height="35" alt="">
+						</div>
+						<h6 style="margin: 10px 0">MUCHAS GRACIAS</h6>
+						<div class="blog-posts">
+							<p>Has generado un cupón de descuento.</p>
+						</div>
+						<div class="text-center" style="margin-top: 20px;display: inline-block">
+							<a href="cupon-expira.html" class="button style-10" aria-hidden="true">Aceptar</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
 	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/owl.carousel.min.js"></script>
@@ -417,6 +422,11 @@
 	<script type="text/javascript" src="js/jquery.parallax-1.1.3.js"></script>
 	<script type="text/javascript" src="js/masonry.js"></script>
 	<script type="text/javascript" src="js/functions.js"></script>
+	
+	<script src="js/modal.js"></script>
+	<script src="js/global.js"></script>
+
+
 </body>
 
 </html>
