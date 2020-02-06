@@ -792,6 +792,13 @@ $(function () {
 		return false;
 	});
 
+	//shop - sort arrow
+	$('.show-cupon-real').click(function () {
+		$("#enviar").hide();
+		$("#ok").show();
+	});
+
+
 	//open subscribe popup
 	$('.open-subscribe').on('click', function () {
 		showPopup($('#subscribe-popup'));
@@ -825,6 +832,7 @@ $(function () {
 	function showPopup(id) {
 		id.addClass('visible active');
 	}
+
 
 	//shop - sort arrow
 	$('.sort-button').click(function () {

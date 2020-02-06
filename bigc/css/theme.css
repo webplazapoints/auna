@@ -2,7 +2,6 @@
 
 body {
 	color: #50535A;
-	font-family: "Telefonica-regular";
 	font-size: 13px;
 	line-height: inherit;
 	margin: 0;
@@ -1098,8 +1097,8 @@ blockquote {
 }
 
 .product-extra-link a:hover {
-	color: #fff;
-	background: #e9426d;
+	color: grey;
+	background: #cad231;
 }
 
 .product-extra-link a span {
@@ -1865,11 +1864,11 @@ blockquote {
 
 /*Footer*/
 
-.footer {
+/* .footer {
 	background: #f5f5f5 none repeat scroll 0 0;
 	margin-top: 50px;
 	padding: 55px 0 35px;
-}
+} */
 
 .logo-footer .sub-title {
 	color: #50535A;
@@ -3321,7 +3320,7 @@ Page Product List Mr
 /*Header*/
 
 .top-header {
-	background: #50535A none repeat scroll 0 0;
+	/* background: #50535A none repeat scroll 0 0; */
 }
 
 .top-left .top-header {
@@ -6862,7 +6861,7 @@ Page Product List Mr
 
 
 .btn-circle-box1 a:hover {
-	background-color: #e9426d;
+	background-color: #cad231;
 }
 
 .btn-circle-box1 .link-wishlist:hover span {
