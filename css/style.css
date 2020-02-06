@@ -9936,7 +9936,7 @@ p,
 .article-container ul li {
 	font-size: 13px;
 	line-height: 20px;
-	color: #555;
+	/* color: #555; */
 	margin-bottom: 10px;
 	font-family: 'Gotham-Medium', sans-serif;
 }
